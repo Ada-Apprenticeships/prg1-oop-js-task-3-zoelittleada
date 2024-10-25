@@ -6,16 +6,20 @@ function validInteger (value) { // value can be a string or a number (integer)
   return !isNaN(num) && Number.isInteger(num) && num>0;
 }  
 
-console.log(validInteger(18))
-
 function validatePriority(priority) { // value can be a string or a number (integer)
-  
+
 }
 
 
-function todaysDate () {
-  
+function todaysDate() {
+  const today = new Date()
+  const year = today.getFullYear()
+  const month = today.getMonth()
+  const day = today.getDay()
+  return`${day}/${month}/${year}`
 }
+
+console.log(todaysDate())
 
 
 class Task  {
