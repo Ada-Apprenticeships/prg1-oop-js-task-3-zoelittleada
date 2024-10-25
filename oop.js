@@ -14,9 +14,12 @@ function validatePriority(priority) { // value can be a string or a number (inte
 function todaysDate() {
   const today = new Date()
   const year = today.getFullYear()
-  const month = today.getMonth()
-  const day = today.getDay()
-  return`${day}/${month}/${year}`
+  const month = today.getMonth().toString().padStart(2,'0')
+  const day = today.getDay().toString().padStart(2,'0')
+  const hours = today.getHours().toString().padStart(2,'0')
+  const minutes = today.getMinutes().toString().padStart(2,'0')
+  const seconds = today.getSeconds().toString().padStart(2,'0')
+  return`${day}/${month}/${year} ${hours}:${minutes}:${seconds}`
 }
 
 console.log(todaysDate())
