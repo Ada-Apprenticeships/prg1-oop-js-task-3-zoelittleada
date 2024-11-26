@@ -16,7 +16,7 @@ function validatePriority(priority) {
   return Object.values(PRIORITY).includes(numPriority) ? numPriority : PRIORITY.LOW;
 }
 
-//gets currrent date and time 
+//gets currrent date and time in british date format 
 function todaysDate() {
   return new Date().toLocaleDateString('en-GB', {
     day: '2-digit',
